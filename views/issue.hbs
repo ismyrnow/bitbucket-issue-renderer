@@ -1,0 +1,28 @@
+<div class="issue clearfix" id="issue-{{id}}">
+  <a href="#issue-{{id}}" class="id">Issue #{{id}}</a>
+  <h3 class="title">{{title}}</h3>
+  
+  <ul class="metadata">
+    <li>Assignee: {{assignee}}</li>
+    <li>Type: {{kind}}</li>
+    <li>Priority: {{priority}}</li>
+    <li>Status: {{status}}</li>
+    <li>Milestone: {{milestone}}</li>
+    <li>Reporter: {{reporter}}</li>
+  </ul>
+  
+  <span class="created">{{reporter}} on {{date created_on}}</span>
+  <p class="content">{{{markdown content}}}</p>
+  
+  {{#if comments}}
+  <div class="comments">
+    <h4>Comments</h4>
+    {{#each comments}}
+    <div class="comment" id="comment-{{id}}">
+      <span class="created">{{user}} on {{date created_on}}</span>
+      <p class="content">{{markdown content}}</p>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>

@@ -1,0 +1,21 @@
+{
+  "name": "bitbucket-issue-renderer",
+  "version": "0.0.0",
+  "description": "Converts issues exported from Bitbucket from JSON to a single HTML file.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "node createdb && node createhtml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "JSONStream": "~0.8.2",
+    "handlebars": "^1.3.0",
+    "lodash": "^2.4.1",
+    "marked": "^0.3.2",
+    "moment": "^2.6.0",
+    "nedb": "^0.10.5"
+  }
+}

@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+      .issue {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+      }
+      .issue .title {
+        margin: 5px 0;
+      }
+      .issue .metadata {
+        float: right;
+        padding: 1em 1.2em;
+        border: 1px solid #bbb;
+        list-style-type: none;
+      }
+      .issue .comment {
+        border-left: 4px solid #E9E9E9;
+        padding-left: 1em;
+        margin-bottom: 1em;
+      }
+      .issue .created {
+        font-size: .9em;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container">    
+      <div class="page-header">
+        <h1>Bitbucket Issue Archive</h1>
+      </div>
+      {{#each issues}}
+        {{>issue}}
+      {{/each}}
+    </div>
+    
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
